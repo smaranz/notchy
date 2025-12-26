@@ -1,10 +1,10 @@
-# Setup Project Like Original NotchNook
+# Setup Project Like Original Notchy
 
-Based on the original NotchNook app structure, here's how to create the project:
+Based on the original Notchy app structure, here's how to create the project:
 
-## Key Settings from Original NotchNook
+## Key Settings from Original Notchy
 
-- **Bundle Identifier:** `lo.cafe.NotchNook` (or use `com.notchnook.app` for our version)
+- **Bundle Identifier:** `lo.cafe.Notchy` (or use `com.notchy.app` for our version)
 - **Minimum macOS Version:** 14.6 ✅ (matches original)
 - **Platform:** macOS (MacOSX) ✅
 - **App Category:** Utilities
@@ -19,10 +19,10 @@ Based on the original NotchNook app structure, here's how to create the project:
 4. Click **Next**
 
 ### Step 2: Configure (Match Original Structure)
-- **Product Name:** `NotchNook`
+- **Product Name:** `Notchy`
 - **Team:** (your team or None)
-- **Organization Identifier:** `com.notchnook` (or `lo.cafe` if you want exact match)
-- **Bundle Identifier:** Will be `com.notchnook.NotchNook` (or `lo.cafe.NotchNook`)
+- **Organization Identifier:** `com.notchy` (or `lo.cafe` if you want exact match)
+- **Bundle Identifier:** Will be `com.notchy.Notchy` (or `lo.cafe.Notchy`)
 - **Interface:** **SwiftUI** ⚠️ Important!
 - **Language:** **Swift**
 - **☐ Use Core Data** (UNCHECK)
@@ -37,12 +37,12 @@ Click **Next**
 
 ### Step 4: Delete Default Files
 - Delete `ContentView.swift`
-- Delete `NotchNookApp.swift`
+- Delete `NotchyApp.swift`
 - (We have our own versions)
 
 ### Step 5: Add Source Files
-1. Right-click **NotchNook** folder → **Add Files to "NotchNook"...**
-2. Navigate to `Sources/NotchNook/`
+1. Right-click **Notchy** folder → **Add Files to "Notchy"...**
+2. Navigate to `Sources/Notchy/`
 3. Select these **folders:**
    - `Models`
    - `Managers`
@@ -52,12 +52,12 @@ Click **Next**
 4. **Settings:**
    - ✅ **Create groups**
    - ❌ **Copy items if needed** (UNCHECKED!)
-   - ✅ **Add to targets: NotchNook**
+   - ✅ **Add to targets: Notchy**
 5. Click **Add**
 
 ### Step 6: Add Info.plist
-1. Right-click **NotchNook** folder → **Add Files...**
-2. Select `Sources/NotchNook/Info.plist`
+1. Right-click **Notchy** folder → **Add Files...**
+2. Select `Sources/Notchy/Info.plist`
 3. Same settings as above
 4. Click **Add**
 
@@ -68,10 +68,10 @@ Click **Next**
 
 **Build Settings Tab:**
 - Search "Info.plist"
-  - **Info.plist File:** `Sources/NotchNook/Info.plist`
+  - **Info.plist File:** `Sources/Notchy/Info.plist`
   - **Generate Info.plist File:** NO
 - Search "Bundle Identifier"
-  - **Product Bundle Identifier:** `com.notchnook.app` (or `lo.cafe.NotchNook`)
+  - **Product Bundle Identifier:** `com.notchy.app` (or `lo.cafe.Notchy`)
 
 **Build Phases Tab:**
 - **Copy Bundle Resources:** Make sure Info.plist is NOT listed here
@@ -96,7 +96,7 @@ The app should build and launch, positioning itself in the notch area!
 ## Differences from Original
 
 Our free version:
-- Uses `com.notchnook.app` bundle ID (original uses `lo.cafe.NotchNook`)
+- Uses `com.notchy.app` bundle ID (original uses `lo.cafe.Notchy`)
 - Simpler structure (no Sparkle updates, no complex dependencies)
 - Open source and free
 

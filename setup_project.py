@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Create a complete Xcode project for NotchNook
+Create a complete Xcode project for Notchy
 This creates a minimal but valid project structure
 """
 
@@ -16,7 +16,7 @@ def create_project_with_xcode():
     script = """
     tell application "Xcode"
         activate
-        set newProject to make new project with properties {name:"NotchNook", product type:"com.apple.product-type.application"}
+        set newProject to make new project with properties {name:"Notchy", product type:"com.apple.product-type.application"}
     end tell
     """
     
@@ -26,7 +26,7 @@ def create_project_with_xcode():
 
 def main():
     print("=" * 60)
-    print("NotchNook Project Setup")
+    print("Notchy Project Setup")
     print("=" * 60)
     print()
     
@@ -38,7 +38,7 @@ def main():
             subprocess.run(['xcodegen', 'generate'], check=True)
             print("✅ Project created successfully!")
             print()
-            print("Open with: open NotchNook.xcodeproj")
+            print("Open with: open Notchy.xcodeproj")
             return
     except:
         pass
@@ -67,7 +67,7 @@ def main():
             print("Generating project...")
             subprocess.run(['xcodegen', 'generate'], check=True)
             print("✅ Project created!")
-            print("Open with: open NotchNook.xcodeproj")
+            print("Open with: open Notchy.xcodeproj")
         except subprocess.CalledProcessError:
             print("❌ Failed to install xcodegen. Please install manually:")
             print("   brew install xcodegen")

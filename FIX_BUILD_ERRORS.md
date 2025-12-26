@@ -7,8 +7,8 @@ This error occurs when the same file is being processed multiple times. Common c
 ### Fix 1: Remove Info.plist from Copy Bundle Resources
 
 1. Open project in Xcode
-2. Select the **NotchNook** project (blue icon)
-3. Select the **NotchNook** target
+2. Select the **Notchy** project (blue icon)
+3. Select the **Notchy** target
 4. Go to **Build Phases** tab
 5. Expand **Copy Bundle Resources**
 6. If you see `Info.plist` listed, select it and press Delete
@@ -27,17 +27,17 @@ This error occurs when the same file is being processed multiple times. Common c
 2. Close Xcode
 3. Delete DerivedData:
    ```bash
-   rm -rf ~/Library/Developer/Xcode/DerivedData/NotchNook-*
+   rm -rf ~/Library/Developer/Xcode/DerivedData/Notchy-*
    ```
 4. Reopen project and build again
 
 ### Fix 4: Verify Build Settings
 
-1. Select **NotchNook** target
+1. Select **Notchy** target
 2. Go to **Build Settings**
 3. Search for "Info.plist"
 4. Verify:
-   - **Info.plist File** = `Sources/NotchNook/Info.plist`
+   - **Info.plist File** = `Sources/Notchy/Info.plist`
    - **Generate Info.plist File** = NO
 
 ## Other Common Errors
@@ -61,7 +61,7 @@ This error occurs when the same file is being processed multiple times. Common c
 Run this to clean everything:
 ```bash
 # Clean DerivedData
-rm -rf ~/Library/Developer/Xcode/DerivedData/NotchNook-*
+rm -rf ~/Library/Developer/Xcode/DerivedData/Notchy-*
 
 # Clean build folder in Xcode (⌘⇧K)
 # Then rebuild (⌘B)

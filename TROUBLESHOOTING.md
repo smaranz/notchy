@@ -19,20 +19,20 @@ If you have `xcodegen` installed:
 ```bash
 brew install xcodegen
 xcodegen generate
-open NotchNook.xcodeproj
+open Notchy.xcodeproj
 ```
 
 ### Solution 3: Regenerate Project
 
 Try regenerating the project:
 ```bash
-rm -rf NotchNook.xcodeproj
+rm -rf Notchy.xcodeproj
 python3 generate_xcode_project.py
 ```
 
 Then try opening in Xcode GUI (not command line):
 ```bash
-open NotchNook.xcodeproj
+open Notchy.xcodeproj
 ```
 
 ## Common Build Errors
@@ -46,7 +46,7 @@ open NotchNook.xcodeproj
 - Check that files are in the correct groups in Xcode
 
 ### "Info.plist not found"
-- In Build Settings, set "Info.plist File" to: `Sources/NotchNook/Info.plist`
+- In Build Settings, set "Info.plist File" to: `Sources/Notchy/Info.plist`
 - Or copy Info.plist to the project root
 
 ### Signing Errors
@@ -67,17 +67,17 @@ open NotchNook.xcodeproj
    - Swift language
 
 2. **Add Source Files**
-   - Drag `Sources/NotchNook` folder into Xcode
+   - Drag `Sources/Notchy` folder into Xcode
    - Choose "Create groups" (not folder references)
    - Uncheck "Copy items if needed"
 
 3. **Configure Build Settings**
    - Minimum Deployment: macOS 14.6
-   - Info.plist path: `Sources/NotchNook/Info.plist`
+   - Info.plist path: `Sources/Notchy/Info.plist`
 
 4. **Remove Default Files**
-   - Delete default `ContentView.swift` and `NotchNookApp.swift`
-   - Use the ones from `Sources/NotchNook/`
+   - Delete default `ContentView.swift` and `NotchyApp.swift`
+   - Use the ones from `Sources/Notchy/`
 
 5. **Build and Run**
    - Press ⌘R

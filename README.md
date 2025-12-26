@@ -1,4 +1,4 @@
-# NotchNook - Free macOS Notch Utility
+# Notchy - Free macOS Notch Utility
 
 A free, open-source macOS application that transforms your MacBook's notch area into a powerful utility hub with widgets, file management, live actions, and gesture support.
 
@@ -28,11 +28,11 @@ See **[CREATE_PROJECT.md](CREATE_PROJECT.md)** for detailed step-by-step instruc
 **Quick version:**
 1. Open Xcode → File → New → Project
 2. Choose macOS → App → SwiftUI → Swift
-3. Product Name: `NotchNook`, Organization: `com.notchnook`
+3. Product Name: `Notchy`, Organization: `com.notchy`
 4. Save in this directory
-5. Delete default ContentView.swift and NotchNookApp.swift
-6. Add all folders from `Sources/NotchNook/` to the project
-7. Configure: Minimum Deployment = macOS 14.6, Info.plist path = `Sources/NotchNook/Info.plist`
+5. Delete default ContentView.swift and NotchyApp.swift
+6. Add all folders from `Sources/Notchy/` to the project
+7. Configure: Minimum Deployment = macOS 14.6, Info.plist path = `Sources/Notchy/Info.plist`
 8. Build and run with ⌘R
 
 For complete instructions, see [CREATE_PROJECT.md](CREATE_PROJECT.md).
@@ -44,14 +44,14 @@ If you need to regenerate the project:
 **Option 1: Using Python script (Recommended)**
 ```bash
 python3 generate_xcode_project.py
-open NotchNook.xcodeproj
+open Notchy.xcodeproj
 ```
 
 **Option 2: Using xcodegen**
 ```bash
 # Install xcodegen first: brew install xcodegen
 ./create_project.sh
-open NotchNook.xcodeproj
+open Notchy.xcodeproj
 ```
 
 **Option 3: Manual Setup in Xcode**
@@ -59,11 +59,11 @@ open NotchNook.xcodeproj
 1. Open Xcode (version 15.0 or later)
 2. File → New → Project
 3. Choose "macOS" → "App"
-4. Product Name: `NotchNook`
+4. Product Name: `Notchy`
 5. Interface: `SwiftUI`
 6. Language: `Swift`
 7. Save in this directory
-8. Add all files from `Sources/NotchNook/` to the project
+8. Add all files from `Sources/Notchy/` to the project
 9. Set minimum deployment to macOS 14.6
 10. Build and run (⌘R)
 
@@ -77,7 +77,7 @@ Download the latest release from the Releases page and drag the app to your Appl
 
 ## Usage
 
-1. Launch NotchNook from Applications
+1. Launch Notchy from Applications
 2. The app will automatically position itself in the notch area (or as a handler on notchless screens)
 3. Swipe horizontally to scroll through widgets
 4. Drag files from Finder onto the file shelf for quick access
@@ -93,7 +93,7 @@ Access settings by:
 
 ## Privacy
 
-NotchNook runs entirely locally on your Mac. No data is collected, transmitted, or stored externally. All settings and file references are stored locally using macOS UserDefaults.
+Notchy runs entirely locally on your Mac. No data is collected, transmitted, or stored externally. All settings and file references are stored locally using macOS UserDefaults.
 
 ## Contributing
 
@@ -105,5 +105,5 @@ This project is open source and free to use. See LICENSE file for details.
 
 ## Acknowledgments
 
-Inspired by NotchNook by lo.cafe. This is a free, open-source alternative.
+Inspired by Notchy by lo.cafe. This is a free, open-source alternative.
 

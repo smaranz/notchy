@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Create a new Xcode project for NotchNook
+# Create a new Xcode project for Notchy
 # This script creates the project structure properly
 
 set -e
 
-PROJECT_NAME="NotchNook"
-BUNDLE_ID="com.notchnook.app"
+PROJECT_NAME="Notchy"
+BUNDLE_ID="com.notchy.app"
 
 echo "Creating new Xcode project: $PROJECT_NAME"
 
@@ -55,9 +55,9 @@ cat > "$PROJECT_NAME.xcodeproj/xcshareddata/xcschemes/$PROJECT_NAME.xcscheme" <<
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "TARGET_ID"
-               BuildableName = "NotchNook.app"
-               BlueprintName = "NotchNook"
-               ReferencedContainer = "container:NotchNook.xcodeproj">
+               BuildableName = "Notchy.app"
+               BlueprintName = "Notchy"
+               ReferencedContainer = "container:Notchy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -86,9 +86,9 @@ cat > "$PROJECT_NAME.xcodeproj/xcshareddata/xcschemes/$PROJECT_NAME.xcscheme" <<
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "TARGET_ID"
-            BuildableName = "NotchNook.app"
-            BlueprintName = "NotchNook"
-            ReferencedContainer = "container:NotchNook.xcodeproj">
+            BuildableName = "Notchy.app"
+            BlueprintName = "Notchy"
+            ReferencedContainer = "container:Notchy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -103,9 +103,9 @@ cat > "$PROJECT_NAME.xcodeproj/xcshareddata/xcschemes/$PROJECT_NAME.xcscheme" <<
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "TARGET_ID"
-            BuildableName = "NotchNook.app"
-            BlueprintName = "NotchNook"
-            ReferencedContainer = "container:NotchNook.xcodeproj">
+            BuildableName = "Notchy.app"
+            BlueprintName = "Notchy"
+            ReferencedContainer = "container:Notchy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -131,7 +131,7 @@ echo "4. Click Next"
 echo "5. Fill in:"
 echo "   - Product Name: $PROJECT_NAME"
 echo "   - Team: (your team or None)"
-echo "   - Organization Identifier: com.notchnook"
+echo "   - Organization Identifier: com.notchy"
 echo "   - Interface: SwiftUI"
 echo "   - Language: Swift"
 echo "   - ☐ Use Core Data (uncheck)"
@@ -141,9 +141,9 @@ echo "7. Save in: $(pwd)"
 echo "8. Click Create"
 echo ""
 echo "Then:"
-echo "9. Delete the default ContentView.swift and NotchNookApp.swift"
+echo "9. Delete the default ContentView.swift and NotchyApp.swift"
 echo "10. Right-click on '$PROJECT_NAME' folder → Add Files to '$PROJECT_NAME'..."
-echo "11. Navigate to Sources/NotchNook/"
+echo "11. Navigate to Sources/Notchy/"
 echo "12. Select all folders: Models, Managers, Views, Widgets, Utilities"
 echo "13. Ensure 'Create groups' is selected"
 echo "14. Ensure 'Copy items if needed' is UNCHECKED"
@@ -152,7 +152,7 @@ echo ""
 echo "Configure:"
 echo "16. Select '$PROJECT_NAME' project → '$PROJECT_NAME' target"
 echo "17. General tab → Minimum Deployments: macOS 14.6"
-echo "18. Build Settings → Info.plist File: Sources/NotchNook/Info.plist"
+echo "18. Build Settings → Info.plist File: Sources/Notchy/Info.plist"
 echo "19. Build Settings → Generate Info.plist File: NO"
 echo ""
 echo "Then build with ⌘R!"

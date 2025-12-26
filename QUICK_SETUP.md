@@ -10,7 +10,7 @@ brew install xcodegen
 xcodegen generate
 
 # Open in Xcode
-open NotchNook.xcodeproj
+open Notchy.xcodeproj
 ```
 
 ## Alternative: Manual Creation in Xcode
@@ -23,9 +23,9 @@ If you prefer not to install xcodegen, create the project manually:
 3. Choose **macOS → App**
 4. Click **Next**
 5. Fill in:
-   - **Product Name:** `NotchNook`
+   - **Product Name:** `Notchy`
    - **Team:** (your team or None)
-   - **Organization Identifier:** `com.notchnook`
+   - **Organization Identifier:** `com.notchy`
    - **Interface:** SwiftUI
    - **Language:** Swift
    - Uncheck **Use Core Data**
@@ -37,13 +37,13 @@ If you prefer not to install xcodegen, create the project manually:
 ### Step 2: Add Source Files
 1. **Delete** the default files:
    - `ContentView.swift`
-   - `NotchNookApp.swift`
+   - `NotchyApp.swift`
    - `Assets.xcassets` (optional, we don't use it)
 
 2. **Add our source files:**
-   - Right-click on **NotchNook** folder in Project Navigator
-   - Select **Add Files to "NotchNook"...**
-   - Navigate to `Sources/NotchNook/`
+   - Right-click on **Notchy** folder in Project Navigator
+   - Select **Add Files to "Notchy"...**
+   - Navigate to `Sources/Notchy/`
    - Select these folders:
      - `Models`
      - `Managers`
@@ -53,18 +53,18 @@ If you prefer not to install xcodegen, create the project manually:
    - **Important settings:**
      - ✅ **Create groups** (selected)
      - ❌ **Copy items if needed** (UNCHECKED)
-     - ✅ **Add to targets: NotchNook** (checked)
+     - ✅ **Add to targets: Notchy** (checked)
    - Click **Add**
 
 ### Step 3: Configure Project Settings
 
-1. Select **NotchNook** project (blue icon) in Navigator
-2. Select **NotchNook** target
+1. Select **Notchy** project (blue icon) in Navigator
+2. Select **Notchy** target
 3. **General Tab:**
    - **Minimum Deployments:** macOS 14.6
 4. **Build Settings Tab:**
    - Search for "Info.plist"
-   - Set **Info.plist File** to: `Sources/NotchNook/Info.plist`
+   - Set **Info.plist File** to: `Sources/Notchy/Info.plist`
    - Set **Generate Info.plist File** to: `NO`
 5. **Build Phases Tab:**
    - Expand **Copy Bundle Resources**
@@ -81,7 +81,7 @@ If you prefer not to install xcodegen, create the project manually:
 
 ### Build Errors
 - **Clean Build Folder:** ⌘⇧K, then rebuild ⌘B
-- **Check all files are added to target:** Select file → File Inspector → Target Membership → ✅ NotchNook
+- **Check all files are added to target:** Select file → File Inspector → Target Membership → ✅ Notchy
 - **Verify Info.plist path:** Build Settings → Info.plist File
 
 ### App Doesn't Appear

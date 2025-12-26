@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate Xcode project file for NotchNook
+Generate Xcode project file for Notchy
 """
 
 import os
@@ -37,7 +37,7 @@ target_config_list_uuid = generate_uuid()
 
 # File UUIDs
 files = {
-    'NotchNookApp.swift': generate_uuid(),
+    'NotchyApp.swift': generate_uuid(),
     'ContentView.swift': generate_uuid(),
     'WidgetContainer.swift': generate_uuid(),
     'FileShelfView.swift': generate_uuid(),
@@ -80,7 +80,7 @@ for name, uuid in build_files.items():
 project_content += f'''/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		{app_product_uuid} /* NotchNook.app */ = {{isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotchNook.app; sourceTree = BUILT_PRODUCTS_DIR; }};
+		{app_product_uuid} /* Notchy.app */ = {{isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notchy.app; sourceTree = BUILT_PRODUCTS_DIR; }};
 '''
 
 for name, uuid in files.items():
@@ -101,7 +101,7 @@ project_content += f'''/* End PBXFileReference section */
 		{products_group_uuid} = {{
 			isa = PBXGroup;
 			children = (
-				{app_product_uuid} /* NotchNook.app */,
+				{app_product_uuid} /* Notchy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@ project_content += f'''/* End PBXFileReference section */
 		{sources_group_uuid} = {{
 			isa = PBXGroup;
 			children = (
-				{files['NotchNookApp.swift']} /* NotchNookApp.swift */,
+				{files['NotchyApp.swift']} /* NotchyApp.swift */,
 				{views_group_uuid} /* Views */,
 				{widgets_group_uuid} /* Widgets */,
 				{managers_group_uuid} /* Managers */,
@@ -117,7 +117,7 @@ project_content += f'''/* End PBXFileReference section */
 				{utilities_group_uuid} /* Utilities */,
 				{files['Info.plist']} /* Info.plist */,
 			);
-			path = Sources/NotchNook;
+			path = Sources/Notchy;
 			sourceTree = "<group>";
 		}};
 		{views_group_uuid} = {{
@@ -178,7 +178,7 @@ project_content += f'''/* End PBXFileReference section */
 /* Begin PBXNativeTarget section */
 		{target_uuid} = {{
 			isa = PBXNativeTarget;
-			buildConfigurationList = {target_config_list_uuid} /* Build configuration list for PBXNativeTarget "NotchNook" */;
+			buildConfigurationList = {target_config_list_uuid} /* Build configuration list for PBXNativeTarget "Notchy" */;
 			buildPhases = (
 				{sources_phase_uuid} /* Sources */,
 				{frameworks_phase_uuid} /* Frameworks */,
@@ -188,9 +188,9 @@ project_content += f'''/* End PBXFileReference section */
 			);
 			dependencies = (
 			);
-			name = NotchNook;
-			productName = NotchNook;
-			productReference = {app_product_uuid} /* NotchNook.app */;
+			name = Notchy;
+			productName = Notchy;
+			productReference = {app_product_uuid} /* Notchy.app */;
 			productType = "com.apple.product-type.application";
 		}};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@ project_content += f'''/* End PBXFileReference section */
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 			}};
-			buildConfigurationList = {project_config_list_uuid} /* Build configuration list for PBXProject "NotchNook" */;
+			buildConfigurationList = {project_config_list_uuid} /* Build configuration list for PBXProject "Notchy" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,7 +216,7 @@ project_content += f'''/* End PBXFileReference section */
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				{target_uuid} /* NotchNook */,
+				{target_uuid} /* Notchy */,
 			);
 		}};
 /* End PBXProject section */
@@ -390,14 +390,14 @@ project_content += f'''			);
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sources/NotchNook/Info.plist;
+				INFOPLIST_FILE = Sources/Notchy/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notchnook.app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notchy.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -418,14 +418,14 @@ project_content += f'''			);
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sources/NotchNook/Info.plist;
+				INFOPLIST_FILE = Sources/Notchy/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notchnook.app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notchy.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -435,7 +435,7 @@ project_content += f'''			);
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		{project_config_list_uuid} /* Build configuration list for PBXProject "NotchNook" */ = {{
+		{project_config_list_uuid} /* Build configuration list for PBXProject "Notchy" */ = {{
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				{debug_config_uuid} /* Debug */,
@@ -444,7 +444,7 @@ project_content += f'''			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		}};
-		{target_config_list_uuid} /* Build configuration list for PBXNativeTarget "NotchNook" */ = {{
+		{target_config_list_uuid} /* Build configuration list for PBXNativeTarget "Notchy" */ = {{
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				{target_debug_config_uuid} /* Debug */,
@@ -460,12 +460,12 @@ project_content += f'''			);
 '''
 
 # Write the project file
-os.makedirs('NotchNook.xcodeproj', exist_ok=True)
-with open('NotchNook.xcodeproj/project.pbxproj', 'w') as f:
+os.makedirs('Notchy.xcodeproj', exist_ok=True)
+with open('Notchy.xcodeproj/project.pbxproj', 'w') as f:
     f.write(project_content)
 
 # Create scheme file
-scheme_dir = 'NotchNook.xcodeproj/xcshareddata/xcschemes'
+scheme_dir = 'Notchy.xcodeproj/xcshareddata/xcschemes'
 os.makedirs(scheme_dir, exist_ok=True)
 
 scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -485,9 +485,9 @@ scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "{target_uuid}"
-               BuildableName = "NotchNook.app"
-               BlueprintName = "NotchNook"
-               ReferencedContainer = "container:NotchNook.xcodeproj">
+               BuildableName = "Notchy.app"
+               BlueprintName = "Notchy"
+               ReferencedContainer = "container:Notchy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -516,9 +516,9 @@ scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "{target_uuid}"
-            BuildableName = "NotchNook.app"
-            BlueprintName = "NotchNook"
-            ReferencedContainer = "container:NotchNook.xcodeproj">
+            BuildableName = "Notchy.app"
+            BlueprintName = "Notchy"
+            ReferencedContainer = "container:Notchy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -533,9 +533,9 @@ scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "{target_uuid}"
-            BuildableName = "NotchNook.app"
-            BlueprintName = "NotchNook"
-            ReferencedContainer = "container:NotchNook.xcodeproj">
+            BuildableName = "Notchy.app"
+            BlueprintName = "Notchy"
+            ReferencedContainer = "container:Notchy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -549,13 +549,13 @@ scheme_content = f'''<?xml version="1.0" encoding="UTF-8"?>
 </Scheme>
 '''
 
-with open(f'{scheme_dir}/NotchNook.xcscheme', 'w') as f:
+with open(f'{scheme_dir}/Notchy.xcscheme', 'w') as f:
     f.write(scheme_content)
 
 print("✅ Xcode project created successfully!")
 print("")
 print("To open the project:")
-print("  open NotchNook.xcodeproj")
+print("  open Notchy.xcodeproj")
 print("")
 print("The project is ready to build and run!")
 

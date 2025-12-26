@@ -14,14 +14,14 @@ targets:
     platform: macOS
     deploymentTarget: "14.6"
     sources:
-      - path: Sources/NotchNook
+      - path: Sources/Notchy
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.notchy.app
         PRODUCT_NAME: Notchy
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
-        INFOPLIST_FILE: Sources/NotchNook/Info.plist
+        INFOPLIST_FILE: Sources/Notchy/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         SWIFT_VERSION: "5.9"
         MACOSX_DEPLOYMENT_TARGET: "14.6"

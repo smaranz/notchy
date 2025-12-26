@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Script to create Xcode project for NotchNook
+# Script to create Xcode project for Notchy
 # This script creates a proper Xcode project structure
 
 set -e
 
-PROJECT_NAME="NotchNook"
-BUNDLE_ID="com.notchnook.app"
+PROJECT_NAME="Notchy"
+BUNDLE_ID="com.notchy.app"
 MIN_OS_VERSION="14.6"
 
 echo "Creating Xcode project for $PROJECT_NAME..."
@@ -25,7 +25,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 	objects = {
 
 /* Begin PBXBuildFile section */
-		APP_ENTRY /* NotchNookApp.swift */ = {isa = PBXBuildFile; fileRef = APP_ENTRY_REF /* NotchNookApp.swift */; };
+		APP_ENTRY /* NotchyApp.swift */ = {isa = PBXBuildFile; fileRef = APP_ENTRY_REF /* NotchyApp.swift */; };
 		CONTENT_VIEW /* ContentView.swift */ = {isa = PBXBuildFile; fileRef = CONTENT_VIEW_REF /* ContentView.swift */; };
 		WIDGET_CONTAINER /* WidgetContainer.swift */ = {isa = PBXBuildFile; fileRef = WIDGET_CONTAINER_REF /* WidgetContainer.swift */; };
 		FILE_SHELF /* FileShelfView.swift */ = {isa = PBXBuildFile; fileRef = FILE_SHELF_REF /* FileShelfView.swift */; };
@@ -47,7 +47,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		APP_ENTRY_REF /* NotchNookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchNookApp.swift; sourceTree = "<group>"; };
+		APP_ENTRY_REF /* NotchyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotchyApp.swift; sourceTree = "<group>"; };
 		CONTENT_VIEW_REF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		WIDGET_CONTAINER_REF /* WidgetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetContainer.swift; sourceTree = "<group>"; };
 		FILE_SHELF_REF /* FileShelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileShelfView.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 		GESTURE_RECOGNIZER_REF /* GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizer.swift; sourceTree = "<group>"; };
 		MEDIA_CONTROLLER_REF /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		FILE_UTILITIES_REF /* FileUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtilities.swift; sourceTree = "<group>"; };
-		PRODUCT_REF /* NotchNook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotchNook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		PRODUCT_REF /* Notchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		INFO_PLIST_REF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +74,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 		SOURCE_GROUP = {
 			isa = PBXGroup;
 			children = (
-				APP_ENTRY_REF /* NotchNookApp.swift */,
+				APP_ENTRY_REF /* NotchyApp.swift */,
 				VIEWS_GROUP /* Views */,
 				WIDGETS_GROUP /* Widgets */,
 				MANAGERS_GROUP /* Managers */,
@@ -82,7 +82,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 				UTILITIES_GROUP /* Utilities */,
 				INFO_PLIST_REF /* Info.plist */,
 			);
-			path = Sources/NotchNook;
+			path = Sources/Notchy;
 			sourceTree = "<group>";
 		};
 		VIEWS_GROUP = {
@@ -149,7 +149,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 		PRODUCTS_GROUP = {
 			isa = PBXGroup;
 			children = (
-				PRODUCT_REF /* NotchNook.app */,
+				PRODUCT_REF /* Notchy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 			);
 			dependencies = (
 			);
-			name = NotchNook;
-			productName = NotchNook;
-			productReference = PRODUCT_REF /* NotchNook.app */;
+			name = Notchy;
+			productName = Notchy;
+			productReference = PRODUCT_REF /* Notchy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				APP_TARGET /* NotchNook */,
+				APP_TARGET /* Notchy */,
 			);
 		};
 /* End PBXProject section */
@@ -206,7 +206,7 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				APP_ENTRY /* NotchNookApp.swift */,
+				APP_ENTRY /* NotchyApp.swift */,
 				CONTENT_VIEW /* ContentView.swift */,
 				WIDGET_CONTAINER /* WidgetContainer.swift */,
 				FILE_SHELF /* FileShelfView.swift */,
@@ -374,14 +374,14 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sources/NotchNook/Info.plist;
+				INFOPLIST_FILE = Sources/Notchy/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notchnook.app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notchy.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -402,14 +402,14 @@ cat > "$PROJECT_NAME.xcodeproj/project.pbxproj" << 'EOF'
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Sources/NotchNook/Info.plist;
+				INFOPLIST_FILE = Sources/Notchy/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.notchnook.app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notchy.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to create Xcode project for NotchNook
+# Script to create Xcode project for Notchy
 # This script uses xcodegen if available, or provides instructions
 
 set -e
@@ -31,7 +31,7 @@ else
     echo "  4. Product Name: Notchy"
     echo "  5. Interface: SwiftUI"
     echo "  6. Language: Swift"
-    echo "  7. Add all files from Sources/NotchNook/"
+    echo "  7. Add all files from Sources/Notchy/"
     echo "  8. Set minimum deployment to macOS 14.6"
     echo ""
     echo "Alternatively, you can use the setup_xcode_project.sh script"

@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "NotchNook",
+    name: "Notchy",
     platforms: [
         .macOS(.v14)
     ],
     products: [
         .executable(
-            name: "NotchNook",
-            targets: ["NotchNook"]
+            name: "Notchy",
+            targets: ["Notchy"]
         )
     ],
     dependencies: [],
     targets: [
         .executableTarget(
-            name: "NotchNook",
+            name: "Notchy",
             dependencies: [],
             path: "Sources"
         )

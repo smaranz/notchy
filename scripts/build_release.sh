@@ -1,21 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-APP_NAME="Notchy"
+APP_NAME=$(/usr/libexec/PlistBuddy -c "Print :CFBundleDisplayName" "Sources/Notchy/Info.plist" 2>/dev/null || echo "Notchy")
 DERIVED_DATA_PATH="build"
 DIST_DIR="dist"
+PROJECT_PATH=$(ls -1 *.xcodeproj 2>/dev/null | head -n 1 || true)
 
-if ! command -v xcodegen >/dev/null 2>&1; then
-  echo "xcodegen is required. Install it with: brew install xcodegen"
+if [ -z "$PROJECT_PATH" ]; then
+  echo "No .xcodeproj found."
+  echo "Create one with:"
+  echo "  python3 generate_xcode_project.py"
+  echo "or:"
+  echo "  brew install xcodegen && xcodegen generate"
   exit 1
 fi
 
-echo "Generating Xcode project..."
-xcodegen generate
+SCHEME_NAME=$(/usr/bin/xcodebuild -list -project "$PROJECT_PATH" | awk '/Schemes:/{flag=1;next}/^$/{flag=0}flag{print;exit}' | xargs)
+if [ -z "$SCHEME_NAME" ]; then
+  echo "No schemes found in $PROJECT_PATH"
+  exit 1
+fi
 
 echo "Building unsigned release..."
 xcodebuild \
-  -scheme "$APP_NAME" \
+  -project "$PROJECT_PATH" \
+  -scheme "$SCHEME_NAME" \
   -configuration Release \
   -derivedDataPath "$DERIVED_DATA_PATH" \
   CODE_SIGNING_ALLOWED=NO \
@@ -28,7 +37,7 @@ if [ ! -d "$APP_PATH" ]; then
   exit 1
 fi
 
-VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "Sources/NotchNook/Info.plist" 2>/dev/null || echo "0.0.0")
+VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "Sources/Notchy/Info.plist" 2>/dev/null || echo "0.0.0")
 
 mkdir -p "$DIST_DIR"
 ZIP_NAME="$DIST_DIR/$APP_NAME-$VERSION.zip"

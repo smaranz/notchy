@@ -7,7 +7,7 @@ The Xcode project is already created and ready to use!
 ### Step 1: Open the Project
 
 ```bash
-open NotchNook.xcodeproj
+open Notchy.xcodeproj
 ```
 
 ### Step 2: Build and Run
@@ -20,8 +20,8 @@ open NotchNook.xcodeproj
 
 If you see signing errors:
 
-1. Select the **NotchNook** project in the navigator
-2. Select the **NotchNook** target
+1. Select the **Notchy** project in the navigator
+2. Select the **Notchy** target
 3. Go to **Signing & Capabilities** tab
 4. Check **"Automatically manage signing"**
 5. Select your **Team** (or create a free Apple ID if needed)
@@ -74,5 +74,5 @@ The app will:
 ✅ Settings panel  
 ✅ Multi-monitor support  
 
-Enjoy your new NotchNook app! 🎉
+Enjoy your new Notchy app! 🎉
 

@@ -23,7 +23,7 @@ cd /path/to/notch
 # 5. Set Interface to "SwiftUI"
 # 6. Set Language to "Swift"
 # 7. Save in the project directory
-# 8. Add all files from Sources/NotchNook to the project
+# 8. Add all files from Sources/Notchy to the project
 ```
 
 ## Building with Swift Package Manager

@@ -28,7 +28,7 @@ When creating the project in Xcode:
 
 ### Why This Matters:
 
-- NotchNook uses macOS-specific APIs (NSScreen, NSWindow, etc.)
+- Notchy uses macOS-specific APIs (NSScreen, NSWindow, etc.)
 - iOS projects won't have access to these APIs
 - The app won't compile if created as iOS project
 
